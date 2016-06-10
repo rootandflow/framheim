@@ -10,6 +10,7 @@ group :jekyll_plugins do
 end
 
 group :api do
+  gem 'netrc'
   gem 'octokit'
 end
 
