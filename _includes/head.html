@@ -9,4 +9,12 @@
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+  {% if jekyll.environment == 'production' %}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js"></script>
+  {% else %}
+    <script type="text/javascript" src="{{ '/js/fallbacks/webfontloader.js' | prepend: site.baseurl }}"></script>
+  {% endif %}
+
+  {% include font-load.html %}
 </head>
