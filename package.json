@@ -1,0 +1,29 @@
+{
+  "version": "0.1.0",
+  "name": "Framheim",
+  "description": "Jekyll static website scaffold utilizing NodeJS as a build system and Foundation 6 for front-end framework.",
+  "keywords": [
+    "web",
+    "build",
+    "ruby",
+    "github-pages",
+    "jekyll",
+    "deployment",
+    "template"
+  ],
+  "homepage": "https://framheim.rootandflow.com/",
+  "author": "Remy Schrader <remy@rootandflow.com> (http://www.rootandflow.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rootandflow/framheim.git"
+  },
+  "main": "package.json",
+  "private": true,
+  "license": "GPL-3.0",
+  "dependencies": {
+    "webfontloader": "^1.6.24"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.1"
+  }
+}
