@@ -9,14 +9,19 @@ title: Test
 
 + site.env - upcase: {{ site.env | upcase }}
 + site.title - downcase: {{ site.title | downcase }}
-+ jekyll.environment: **{{ jekyll.environment }}**
++ jekyll.environment value is: **{{ jekyll.environment }}**
++ jekyll.environment equals "development": {% if jekyll.environment == 'development' %}True{% else %}False{% endif %}
++ jekyll.environment equals "production": {% if jekyll.environment == 'production' %}True{% else %}False{% endif %}
 + jekyll.environment - remove 'ment': {{ jekyll.environment | remove: 'ment' }}
 + jekyll.environment - truncated 3: {{ jekyll.environment | truncate: 3, '' }}
-+ site.env.prd: {{ site.env.prd }}
-+ site.env.stg: {{ site.env.stg }}
-+ site.env.dev: {{ site.env.dev }}
-+ site.env is NIL: {% if site.env.dev == NIL %}True{% else %}False{% endif %}
-+ site.env is equal to Repo name: {% if site.env.dev == site.github.repository_name %}True{% else %}False{% endif %}
++ site.url value is: {{ site.url }}
++ site.baseurl value is: {{ site.baseurl }}
++ site.github.url is: {{ site.github.url }}
++ site.url is equal to site.github.url: {% if site.url == site.github.url %}True{% else %}False{% endif %}
++ site.baseurl is NIL: {% if site.baseurl == NIL %}True{% else %}False{% endif %}
++ site.title value is: {{ site.title }}
++ site.title value - downcase - is: {{ site.title | downcase }}
++ site.title - downcase - is equal to Repo name: {% if site.title | downcase == site.github.repository_name %}True{% else %}False{% endif %}
 
 #### Data variables
 
