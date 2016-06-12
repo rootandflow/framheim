@@ -16,5 +16,9 @@
     <script type="text/javascript" src="{{ '/js/fallbacks/webfontloader.js' | prepend: site.baseurl }}"></script>
   {% endif %}
 
+  {% if site.url != site.github.url %}
+    <script type="text/javascript" src="{{ '/js/holder.js' | prepend: site.baseurl }}"></script>
+  {% endif %}
+
   {% include font-load.html %}
 </head>
