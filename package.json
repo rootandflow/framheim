@@ -25,6 +25,8 @@
   },
   "devDependencies": {
     "holderjs": "^2.9.3",
+    "shelljs": "^0.7.0",
+    "shx": "^0.1.2",
     "webpack": "^1.13.1"
   }
 }
