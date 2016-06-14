@@ -21,6 +21,7 @@
   "private": true,
   "license": "GPL-3.0",
   "dependencies": {
+    "foundation-sites": "^6.2.3",
     "webfontloader": "^1.6.24"
   },
   "devDependencies": {
