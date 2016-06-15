@@ -18,8 +18,6 @@
     "url": "https://github.com/rootandflow/framheim.git"
   },
   "main": "package.json",
-  "private": true,
-  "license": "GPL-3.0",
   "dependencies": {
     "foundation-sites": "^6.2.3",
     "webfontloader": "^1.6.24"
@@ -29,5 +27,10 @@
     "shelljs": "^0.7.0",
     "shx": "^0.1.2",
     "webpack": "^1.13.1"
-  }
+  },
+  "scripts": {
+    "serve": "jekyll serve --config _config.local.yml"
+  },
+  "private": true,
+  "license": "GPL-3.0"
 }
