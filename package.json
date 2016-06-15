@@ -29,7 +29,7 @@
     "webpack": "^1.13.1"
   },
   "scripts": {
-    "serve": "jekyll serve --config _config.local.yml"
+    "start": "jekyll serve --config _config.local.yml"
   },
   "private": true,
   "license": "GPL-3.0"
