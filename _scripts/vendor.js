@@ -1,5 +1,14 @@
-var $ = require('jquery');
+
+  WebFont.load({
+    google: {
+      families: ['Ovo', 'Muli']
+    }
+  });
+
 var foundation = require('foundation-sites');
-var webFontLoader = require('webfontloader');
+
+  $(document).ready(function($) {
+      $(document).foundation();
+  });
 
 console.log('vendor script loaded');

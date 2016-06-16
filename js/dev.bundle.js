@@ -51,15 +51,13 @@
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var holderjs = __webpack_require__(4);
+	var holderjs = __webpack_require__(2);
 
 	console.log('dev script loaded');
 
 
 /***/ },
-/* 2 */,
-/* 3 */,
-/* 4 */
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!

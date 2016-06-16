@@ -1,3 +1,5 @@
+var webpack = require('webpack');
+
 module.exports = {
   entry: {
     dev: ["./_scripts/dev.js"],
@@ -9,5 +11,13 @@ module.exports = {
     filename: "[name].bundle.js",
     chunkFilename: "[id].bundle.js"
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      WebFont: 'webfontloader'
+    })
+  ],
   watch: true
 };
