@@ -11,16 +11,11 @@
 
 {% if jekyll.environment == 'production' %}
   <!-- Both Github pages sites, published at main repo and forks -->
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js"></script>
-
   {% if site.url != site.github.url %}
   <!-- Only on Github pages site staged from user project forks -->
   {% endif %}
   {% else %}
   <!-- Only on localhost served from user local machine dev copies -->
-  <script type="text/javascript" src="{{ '/js/vendor.bundle.js' | prepend: site.baseurl }}"></script>
 
 {% endif %}
 {% if site.url != site.github.url %}
@@ -33,6 +28,38 @@
   <!-- Both on Github pages site published from main repo and from local dev copies -->
 {% endif %}
   <!-- Across all sites: main, forks and local -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+    window.$ || document.write
+    ("<script type='text/javascript' src='{{ '/js/fallbacks/jquery.min.js'
+                  | prepend: site.baseurl }}'>\x3C/script>")
+    </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js"></script>
+    <script>
+    window.WebFont || document.write
+    ("<script type='text/javascript' src='{{ '/js/fallbacks/webfontloader.js'
+                  | prepend: site.baseurl }}'>\x3C/script>")
+    </script>
+    <script>
+    WebFont.load({
+      google: {
+        families: ['Ovo', 'Muli']
+      }
+    });
+    </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js"></script>
+    <script>
+    window.Foundation || document.write
+    ("<script type='text/javascript' src='{{ '/js/fallbacks/foundation.min.js'
+                  | prepend: site.baseurl }}'>\x3C/script>")
+    </script>
+    <script>
+    $(document).ready(function($) {
+        $(document).foundation();
+    });
+    </script>
+
+  <script type="text/javascript" src="{{ '/js/vendor.bundle.js' | prepend: site.baseurl }}"></script>
   <script type="text/javascript" src="{{ '/js/site.bundle.js' | prepend: site.baseurl }}"></script>
 
   <link rel="stylesheet"

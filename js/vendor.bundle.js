@@ -45,12 +45,12 @@
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(7);
+	module.exports = __webpack_require__(6);
 
 
 /***/ },
 
-/***/ 7:
+/***/ 6:
 /***/ function(module, exports) {
 
 	console.log('vendor script loaded');
