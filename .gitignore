@@ -1,7 +1,7 @@
 .bundle
 CNAME
 _config.yml
-_config_dev.yml
+_config.local.yml
 .DS_Store
 dst/scripts/dev.js
 Gemfile.lock
