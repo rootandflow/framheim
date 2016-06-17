@@ -15,7 +15,6 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js"></script>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.css">
   {% if site.url != site.github.url %}
   <!-- Only on Github pages site staged from user project forks -->
   {% endif %}
@@ -23,7 +22,6 @@
   <!-- Only on localhost served from user local machine dev copies -->
   <script type="text/javascript" src="{{ '/js/vendor.bundle.js' | prepend: site.baseurl }}"></script>
 
-  <link rel="stylesheet" href="{{ '/css/foundation.min.css' | prepend: site.baseurl }}">
 {% endif %}
 {% if site.url != site.github.url %}
   <!-- Both staging sites served online from user forks and from local dev copies -->
@@ -37,6 +35,11 @@
   <!-- Across all sites: main, forks and local -->
   <script type="text/javascript" src="{{ '/js/site.bundle.js' | prepend: site.baseurl }}"></script>
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet"
+       href="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.css"
+    onerror="this.href='{{ "/css/foundation.min.css" | prepend: site.baseurl }}'"
+  />
+
+  <link rel="stylesheet" href='{{ "/css/main.css" | prepend: site.baseurl }}'>
 
 </head>
